@@ -47,6 +47,7 @@ static class HighScoreController
 
 
 	private static List<Score> _Scores = new List<Score>();
+
 	/// <summary>
 	/// Loads the scores from the highscores text file.
 	/// </summary>

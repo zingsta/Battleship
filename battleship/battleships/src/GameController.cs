@@ -22,6 +22,7 @@ public static class GameController
 	private static Stack<GameState> _state = new Stack<GameState>();
 
 	private static AIOption _aiSetting;
+
 	/// <summary>
 	/// Returns the current state of the game, indicating which screen is
 	/// currently being used
@@ -50,6 +51,9 @@ public static class GameController
 		get { return _ai; }
 	}
 
+	/// <summary>
+	/// Main menu or quitting
+	/// </summary>
 	public GameController()
 	{
 		//bottom state will be quitting. If player exits main menu then the game is over
@@ -98,7 +102,6 @@ public static class GameController
 	/// <summary>
 	/// Stops listening to the old game once a new game is started
 	/// </summary>
-
 	private static void EndGame()
 	{
 		//RemoveHandler _human.PlayerGrid.Changed, AddressOf GridChanged
@@ -118,6 +121,12 @@ public static class GameController
 		SwinGame.RefreshScreen();
 	}
 
+	/// <summary>
+	/// Plays the hit sequence.
+	/// </summary>
+	/// <param name="row">Row hit</param>
+	/// <param name="column">Column hit</param>
+	/// <param name="showAnimation">If set to true show animation.</param>
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -129,6 +138,12 @@ public static class GameController
 		DrawAnimationSequence();
 	}
 
+	/// <summary>
+	/// Plays the miss sequence
+	/// </summary>
+	/// <param name="row">Row it missed in</param>
+	/// <param name="column">Column it missed in </param>
+	/// <param name="showAnimation">If true show animation</param>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {

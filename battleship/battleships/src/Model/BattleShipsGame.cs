@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+
 /// <summary>
 /// The BattleShipsGame controls a big part of the game. It will add the two players
 /// to the game and make sure that both players ships are all deployed before starting the game.
@@ -33,6 +34,7 @@ public class BattleShipsGame
 	private Player[] _players = new Player[3];
 
 	private int _playerIndex = 0;
+
 	/// <summary>
 	/// The current player.
 	/// </summary>
@@ -89,6 +91,7 @@ public class BattleShipsGame
 			newAttack = new AttackResult(ResultOfAttack.GameOver, newAttack.Ship, newAttack.Text, row, col);
 		}
 
+		//moves on to next player
 		if (AttackCompleted != null) {
 			AttackCompleted(this, newAttack);
 		}

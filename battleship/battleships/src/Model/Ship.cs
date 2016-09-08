@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+
 /// <summary>
 /// A Ship has all the details about itself. For example the shipname,
 /// size, number of hits taken and the location. Its able to add tiles,
@@ -23,6 +24,7 @@ public class Ship
 	private int _col;
 
 	private Direction _direction;
+
 	/// <summary>
 	/// The type of ship
 	/// </summary>
@@ -66,14 +68,29 @@ public class Ship
 		get { return _row; }
 	}
 
+	/// <summary>
+	/// The column location of the ship
+	/// </summary>
+	/// <value>The leftmost value of the ship</value>
+	/// <returns>The Column of the ship</returns>
 	public int Column {
 		get { return _col; }
 	}
 
+	/// <summary>
+	/// The rotation or direction of the ship
+	/// </summary>
+	/// <value>The direction the ship is going </value>
+	/// <returns>The direction that ship is in </returns>
 	public Direction Direction {
 		get { return _direction; }
 	}
 
+	/// <summary>
+	/// Selects ship to place
+	/// </summary>
+	/// <param name="ShipName">Type of ship</param>
+	/// <returns>Selected ship</returns>
 	public Ship(ShipName ship)
 	{
 		_shipName = ship;
@@ -103,6 +120,9 @@ public class Ship
 		_tiles.Clear();
 	}
 
+	/// <summary>
+	/// Hits taken increases by one
+	/// </summary>
 	public void Hit()
 	{
 		_hitsTaken = _hitsTaken + 1;
@@ -116,6 +136,9 @@ public class Ship
 		get { return _tiles.Count > 0; }
 	}
 
+	///<summary>
+	/// IsDestroyed returns true is the amount of hits is the same as the ship size
+	/// </summary>
 	public bool IsDestroyed {
 		get { return Hits == Size; }
 	}

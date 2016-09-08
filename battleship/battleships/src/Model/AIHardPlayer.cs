@@ -1,10 +1,10 @@
-
 using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+
 /// <summary>
 /// AIHardPlayer is a type of player. This AI will know directions of ships
 /// when it has found 2 ship tiles and will try to destroy that ship. If that ship
@@ -24,6 +24,7 @@ public class AIHardPlayer : AIPlayer
 		private readonly Location _ShotAt;
 
 		private readonly Location _Source;
+
 		/// <summary>
 		/// The target shot at
 		/// </summary>
@@ -42,6 +43,11 @@ public class AIHardPlayer : AIPlayer
 			get { return _Source; }
 		}
 
+		/// <summary>
+		/// The target chosen.
+		/// </summary>
+		/// <param name="shootat">Taget shot at</param>
+		/// <param name="source">Source that added this location as a target</param>
 		internal Target(Location shootat, Location source)
 		{
 			_ShotAt = shootat;
@@ -93,6 +99,8 @@ public class AIHardPlayer : AIPlayer
 	private List<Target> _LastHit = new List<Target>();
 
 	private Target _CurrentTarget;
+
+
 	public AIHardPlayer(BattleShipsGame game) : base(game)
 	{
 	}
@@ -293,7 +301,6 @@ public class AIHardPlayer : AIPlayer
 	/// ReOrderTargets will optimise the targeting by re-orderin the stack that the targets are in.
 	/// By putting the most important targets at the top they are the ones that will be shot at first.
 	/// </summary>
-
 	private void ReOrderTargets()
 	{
 		//if the ship is lying on the same row, call MoveToTopOfStack to optimise on the row
@@ -344,7 +351,6 @@ public class AIHardPlayer : AIPlayer
 	/// </summary>
 	/// <param name="row">the row of the targets location</param>
 	/// <param name="column">the column of the targets location</param>
-
 	private void AddTarget(int row, int column)
 	{
 

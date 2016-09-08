@@ -12,7 +12,6 @@ using SwinGameSDK;
 /// from the menus in the game. These include the main menu, game
 /// menu and the settings m,enu.
 /// </summary>
-
 static class MenuController
 {
 
@@ -70,6 +69,7 @@ static class MenuController
 	private static readonly Color MENU_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
 
 	private static readonly Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(1, 57, 86, 255);
+
 	/// <summary>
 	/// Handles the processing of user input when the main menu is showing
 	/// </summary>

@@ -5,15 +5,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+
 /// <summary>
 /// The SeaGridAdapter allows for the change in a sea grid view. Whenever a ship is
 /// presented it changes the view into a sea tile instead of a ship tile.
 /// </summary>
 public class SeaGridAdapter : ISeaGrid
 {
-
-
 	private SeaGrid _MyGrid;
+
 	/// <summary>
 	/// Create the SeaGridAdapter, with the grid, and it will allow it to be changed
 	/// </summary>
@@ -61,8 +61,8 @@ public class SeaGridAdapter : ISeaGrid
 	/// </summary>
 	public event EventHandler ISeaGrid.Changed;
 
-	/// <summary>
-	/// Get the width of a tile
+	/// <summary> 
+	/// Get the width of a tile 
 	/// </summary>
 	public int Width {
 		get { return _MyGrid.Width; }

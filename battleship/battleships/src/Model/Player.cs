@@ -4,9 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+
 /// <summary>
 /// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
-/// all ships are deployed and if all ships are detroyed. A Player can also attach.
+/// all ships are deployed and if all ships are detroyed. A Player can also attack.
 /// </summary>
 public class Player : IEnumerable<Ship>
 {
@@ -21,6 +22,7 @@ public class Player : IEnumerable<Ship>
 	private int _hits;
 
 	private int _misses;
+
 	/// <summary>
 	/// Returns the game that the player is part of.
 	/// </summary>
@@ -39,6 +41,10 @@ public class Player : IEnumerable<Ship>
 		set { _enemyGrid = value; }
 	}
 
+	/// <summary>
+	/// Sets the game up with the ships the player has set up
+	/// </summary>
+	/// <param name="controller">Controller</param>
 	public Player(BattleShipsGame controller)
 	{
 		_game = controller;
@@ -75,8 +81,11 @@ public class Player : IEnumerable<Ship>
 		get { return _playerGrid.AllDeployed; }
 	}
 
+	/// <summary>
+	/// Returns true if all ships are destroyed
+	/// </summary>
 	public bool IsDestroyed {
-//Check if all ships are destroyed... -1 for the none ship
+		//Check if all ships are destroyed... -1 for the none ship
 		get { return _playerGrid.ShipsKilled == Enum.GetValues(typeof(ShipName)).Length - 1; }
 	}
 
@@ -142,6 +151,11 @@ public class Player : IEnumerable<Ship>
 
 		return lst.GetEnumerator();
 	}
+
+	/// <summary>
+	/// Gets the enumerator.
+	/// </summary>
+	/// <returns>The enumerator.</returns>
 	IEnumerator<Ship> IEnumerable<Ship>.GetEnumerator()
 	{
 		return GetShipEnumerator();
@@ -196,6 +210,9 @@ public class Player : IEnumerable<Ship>
 		return result;
 	}
 
+	/// <summary>
+	/// Randomises Deployment
+	/// </summary>
 	public virtual void RandomizeDeployment()
 	{
 		bool placementSuccessful = false;

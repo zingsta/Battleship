@@ -1,12 +1,20 @@
-
+using SwinGameSDK;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+
+/// <summary>
+/// The logic of the game, responsible for loading in the main essence of the
+/// game, loading in resources and other main pieces of information. 
+/// </summary>
 static class GameLogic
 {
+	/// <summary>
+	/// Main file
+	/// </summary>
 	public static void Main()
 	{
 		//Opens a new Graphics Window
