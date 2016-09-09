@@ -3,7 +3,6 @@ using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 using SwinGameSDK;
 
@@ -215,8 +214,8 @@ public static class GameResources
 	/// <summary>
 	/// Ends the loading screen.
 	/// </summary>
-	/// <param name="Message">Message to show</param>
-	/// <param name="Number"></param>
+	/// <param name="message">Message to show</param>
+	/// <param name="number"></param>
 	private static void ShowMessage(string message, int number)
 	{
 		const int TX = 310;
@@ -326,8 +325,8 @@ public static class GameResources
 	/// </summary>
 	private static void FreeFonts()
 	{
-		Font obj = default(Font);
-		foreach ( obj in _Fonts.Values) {
+		
+		foreach (Font obj in _Fonts.Values) {
 			SwinGame.FreeFont(obj);
 		}
 	}
@@ -337,8 +336,8 @@ public static class GameResources
 	/// </summary>
 	private static void FreeImages()
 	{
-		Bitmap obj = default(Bitmap);
-		foreach ( obj in _Images.Values) {
+		
+		foreach (Bitmap obj in _Images.Values) {
 			SwinGame.FreeBitmap(obj);
 		}
 	}
@@ -348,8 +347,7 @@ public static class GameResources
 	/// </summary>
 	private static void FreeSounds()
 	{
-		SoundEffect obj = default(SoundEffect);
-		foreach ( obj in _Sounds.Values) {
+		foreach (SoundEffect obj in _Sounds.Values) {
 			Audio.FreeSoundEffect(obj);
 		}
 	}
@@ -359,8 +357,8 @@ public static class GameResources
 	/// </summary>
 	private static void FreeMusic()
 	{
-		Music obj = default(Music);
-		foreach ( obj in _Music.Values) {
+		
+		foreach (Music obj in _Music.Values) {
 			Audio.FreeMusic(obj);
 		}
 	}
