@@ -52,7 +52,11 @@ public static class GameResources
 		NewSound("Error", "error.wav");
 		NewSound("Hit", "hit.wav");
 		NewSound("Sink", "sink.wav");
-		NewSound("Siren", "siren.wav");
+		/* 
+		Need to figure out if the Siren function is required in game. If so, a new audio file must be
+		placed into the Resources/sounds folder called "siren.wav"
+		NewSound("Siren", "siren.wav"); 
+		*/
 		NewSound("Miss", "watershot.wav");
 		NewSound("Winner", "winner.wav");
 		NewSound("Lose", "lose.wav");
