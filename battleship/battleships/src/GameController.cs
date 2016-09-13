@@ -6,11 +6,10 @@ using System.Data;
 using System.Diagnostics;
 using SwinGameSDK;
 
-/// <summary>
-/// The GameController is responsible for controlling the game,
-/// managing user input, and displaying the current state of the
-/// game.
-/// </summary>
+/*
+The GameController is responsible for controlling the game,
+managing user input, and displaying the current state of the game.
+*/
 public static class GameController
 {
 
@@ -23,37 +22,34 @@ public static class GameController
 
 	private static AIOption _aiSetting;
 
-	/// <summary>
-	/// Returns the current state of the game, indicating which screen is
-	/// currently being used
-	/// </summary>
-	/// <value>The current state</value>
-	/// <returns>The current state</returns>
+	/*
+	/Returns the current state of the game, indicating which screen is currently being used
+	<value>The current state</value>
+	<returns>The current state</returns>
+	*/
 	public static GameState CurrentState {
 		get { return _state.Peek(); }
 	}
 
-	/// <summary>
-	/// Returns the human player.
-	/// </summary>
-	/// <value>the human player</value>
-	/// <returns>the human player</returns>
+	/*
+	Returns the human player.
+	<value>the human player</value>
+	<returns>the human player</returns>
+	*/
 	public static Player HumanPlayer {
 		get { return _human; }
 	}
 
-	/// <summary>
-	/// Returns the computer player.
-	/// </summary>
-	/// <value>the computer player</value>
-	/// <returns>the conputer player</returns>
+	/*
+	Returns the computer player.
+	<value>the computer player</value>
+	<returns>the conputer player</returns>
+	*/
 	public static Player ComputerPlayer {
 		get { return _ai; }
 	}
 
-	/// <summary>
-	/// Main menu or quitting
-	/// </summary>
+	//Main menu or quitting
 	public GameController()
 	{
 		//bottom state will be quitting. If player exits main menu then the game is over
@@ -63,12 +59,10 @@ public static class GameController
 		_state.Push(GameState.ViewingMainMenu);
 	}
 
-	/// <summary>
-	/// Starts a new game.
-	/// </summary>
-	/// <remarks>
-	/// Creates an AI player based upon the _aiSetting.
-	/// </remarks>
+	/*
+	Starts a new game.
+	Creates an AI player based upon the _aiSetting.
+	*/
 	public static void StartGame()
 	{
 		if (_theGame != null)
@@ -99,9 +93,7 @@ public static class GameController
 		AddNewState(GameState.Deploying);
 	}
 
-	/// <summary>
-	/// Stops listening to the old game once a new game is started
-	/// </summary>
+	//Stops listening to the old game once a new game is started
 	private static void EndGame()
 	{
 		//RemoveHandler _human.PlayerGrid.Changed, AddressOf GridChanged
@@ -109,24 +101,23 @@ public static class GameController
 		_theGame.AttackCompleted -= AttackCompleted;
 	}
 
-	/// <summary>
-	/// Listens to the game grids for any changes and redraws the screen
-	/// when the grids change
-	/// </summary>
-	/// <param name="sender">the grid that changed</param>
-	/// <param name="args">not used</param>
+	/*
+	Listens to the game grids for any changes and redraws the screen when the grids change
+	<param name="sender">the grid that changed</param>
+	<param name="args">not used</param> 
+	*/
 	private static void GridChanged(object sender, EventArgs args)
 	{
 		DrawScreen();
 		SwinGame.RefreshScreen();
 	}
 
-	/// <summary>
-	/// Plays the hit sequence.
-	/// </summary>
-	/// <param name="row">Row hit</param>
-	/// <param name="column">Column hit</param>
-	/// <param name="showAnimation">If set to true show animation.</param>
+	/* 
+	Plays the hit sequence.
+	<param name="row">Row hit</param>
+	<param name="column">Column hit</param>
+	<param name="showAnimation">If set to true show animation.</param>
+	 */
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -138,12 +129,12 @@ public static class GameController
 		DrawAnimationSequence();
 	}
 
-	/// <summary>
-	/// Plays the miss sequence
-	/// </summary>
-	/// <param name="row">Row it missed in</param>
-	/// <param name="column">Column it missed in </param>
-	/// <param name="showAnimation">If true show animation</param>
+	/* 
+	Plays the miss sequence
+	<param name="row">Row it missed in</param>
+	<param name="column">Column it missed in </param>
+	<param name="showAnimation">If true show animation</param>
+	 */
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -155,14 +146,13 @@ public static class GameController
 		DrawAnimationSequence();
 	}
 
-	/// <summary>
-	/// Listens for attacks to be completed.
-	/// </summary>
-	/// <param name="sender">the game</param>
-	/// <param name="result">the result of the attack</param>
-	/// <remarks>
-	/// Displays a message, plays sound and redraws the screen
-	/// </remarks>
+	/* 
+	Listens for attacks to be completed.
+	<param name="sender">the game</param>
+	<param name="result">the result of the attack</param>
+	
+	Displays a message, plays sound and redraws the screen
+	 */
 	private static void AttackCompleted(object sender, AttackResult result)
 	{
 		bool isHuman = false;
@@ -208,14 +198,10 @@ public static class GameController
 		}
 	}
 
-	/// <summary>
-	/// Completes the deployment phase of the game and
-	/// switches to the battle mode (Discovering state)
-	/// </summary>
-	/// <remarks>
-	/// This adds the players to the game before switching
-	/// state.
-	/// </remarks>
+	/* 
+	Completes the deployment phase of the game and switches to the battle mode (Discovering state)
+	This adds the players to the game before switching state.
+	 */
 	public static void EndDeployment()
 	{
 		//deploy the players
@@ -225,14 +211,13 @@ public static class GameController
 		SwitchState(GameState.Discovering);
 	}
 
-	/// <summary>
-	/// Gets the player to attack the indicated row and column.
-	/// </summary>
-	/// <param name="row">the row to attack</param>
-	/// <param name="col">the column to attack</param>
-	/// <remarks>
-	/// Checks the attack result once the attack is complete
-	/// </remarks>
+	/* 
+	Gets the player to attack the indicated row and column.
+	<param name="row">the row to attack</param>
+	<param name="col">the column to attack</param>
+	
+	Checks the attack result once the attack is complete
+	 */
 	public static void Attack(int row, int col)
 	{
 		AttackResult result = default(AttackResult);
@@ -240,12 +225,10 @@ public static class GameController
 		CheckAttackResult(result);
 	}
 
-	/// <summary>
-	/// Gets the AI to attack.
-	/// </summary>
-	/// <remarks>
-	/// Checks the attack result once the attack is complete.
-	/// </remarks>
+	/* 
+	Gets the AI to attack.
+	Checks the attack result once the attack is complete.
+	 */
 	private static void AIAttack()
 	{
 		AttackResult result = default(AttackResult);
@@ -253,14 +236,11 @@ public static class GameController
 		CheckAttackResult(result);
 	}
 
-	/// <summary>
-	/// Checks the results of the attack and switches to
-	/// Ending the Game if the result was game over.
-	/// </summary>
-	/// <param name="result">the result of the last
-	/// attack</param>
-	/// <remarks>Gets the AI to attack if the result switched
-	/// to the AI player.</remarks>
+	/* 
+	Checks the results of the attack and switches to Ending the Game if the result was game over.
+	<param name="result">the result of the last attack</param>
+	Gets the AI to attack if the result switched to the AI player.
+	 */
 	private static void CheckAttackResult(AttackResult result)
 	{
 		switch (result.Value) {
@@ -274,14 +254,11 @@ public static class GameController
 		}
 	}
 
-	/// <summary>
-	/// Handles the user SwinGame.
-	/// </summary>
-	/// <remarks>
-	/// Reads key and mouse input and converts these into
-	/// actions for the game to perform. The actions
-	/// performed depend upon the state of the game.
-	/// </remarks>
+	/* 
+	Handles the user SwinGame.
+	Reads key and mouse input and converts these into actions for the game to perform. The actions
+	performed depend upon the state of the game.
+	 */
 	public static void HandleUserInput()
 	{
 		//Read incoming input events
@@ -314,12 +291,10 @@ public static class GameController
 		UpdateAnimations();
 	}
 
-	/// <summary>
-	/// Draws the current state of the game to the screen.
-	/// </summary>
-	/// <remarks>
-	/// What is drawn depends upon the state of the game.
-	/// </remarks>
+	/* 
+	Draws the current state of the game to the screen.
+	What is drawn depends upon the state of the game.
+	 */
 	public static void DrawScreen()
 	{
 		DrawBackground();
@@ -353,49 +328,39 @@ public static class GameController
 		SwinGame.RefreshScreen();
 	}
 
-	/// <summary>
-	/// Move the game to a new state. The current state is maintained
-	/// so that it can be returned to.
-	/// </summary>
-	/// <param name="state">the new game state</param>
+	/* 
+	Move the game to a new state. The current state is maintained so that it can be returned to.
+	<param name="state">the new game state</param>
+	 */
 	public static void AddNewState(GameState state)
 	{
 		_state.Push(state);
 		Message = "";
 	}
 
-	/// <summary>
-	/// End the current state and add in the new state.
-	/// </summary>
-	/// <param name="newState">the new state of the game</param>
+	/*
+	End the current state and add in the new state.
+	param name="newState">the new state of the game</param>
+	*/
 	public static void SwitchState(GameState newState)
 	{
 		EndCurrentState();
 		AddNewState(newState);
 	}
 
-	/// <summary>
-	/// Ends the current state, returning to the prior state
-	/// </summary>
+	//Ends the current state, returning to the prior state
 	public static void EndCurrentState()
 	{
 		_state.Pop();
 	}
 
-	/// <summary>
-	/// Sets the difficulty for the next level of the game.
-	/// </summary>
-	/// <param name="setting">the new difficulty level</param>
+	/* 
+	Sets the difficulty for the next level of the game.
+	<param name="setting">the new difficulty level</param>
+	 */
 	public static void SetDifficulty(AIOption setting)
 	{
 		_aiSetting = setting;
 	}
 
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================
