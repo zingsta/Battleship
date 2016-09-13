@@ -3,7 +3,6 @@ using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 
 /// <summary>
@@ -14,12 +13,13 @@ using System.Diagnostics;
 /// grid. This can be used in conjuncture with the SeaGridAdapter to 
 /// mask the position of the ships.
 /// </remarks>
-public class SeaGrid : ISeaGrid
+public class SeaGrid
 {
 
 	private const int _WIDTH = 10;
-
 	private const int _HEIGHT = 10;
+
+
 	private Tile[,] _GameTiles = new Tile[Width, Height];
 	private Dictionary<ShipName, Ship> _Ships;
 
@@ -28,7 +28,7 @@ public class SeaGrid : ISeaGrid
 	/// <summary>
 	/// The sea grid has changed and should be redrawn.
 	/// </summary>
-	public event EventHandler ISeaGrid.Changed;
+	public event EventHandler Changed;
 
 	/// <summary>
 	/// The width of the sea grid.
@@ -36,7 +36,10 @@ public class SeaGrid : ISeaGrid
 	/// <value>The width of the sea grid.</value>
 	/// <returns>The width of the sea grid.</returns>
 	public int Width {
-		get { return _WIDTH; }
+		get 
+		{ 
+			return _WIDTH; 
+		}
 	}
 
 	/// <summary>
@@ -45,14 +48,20 @@ public class SeaGrid : ISeaGrid
 	/// <value>The height of the sea grid</value>
 	/// <returns>The height of the sea grid</returns>
 	public int Height {
-		get { return _HEIGHT; }
+		get
+		{ 
+			return _HEIGHT; 
+		}
 	}
 
 	/// <summary>
 	/// ShipsKilled returns the number of ships killed
 	/// </summary>
 	public int ShipsKilled {
-		get { return _ShipsKilled; }
+		get 
+		{ 
+			return _ShipsKilled; 
+		}
 	}
 
 	/// <summary>
@@ -61,8 +70,12 @@ public class SeaGrid : ISeaGrid
 	/// <param name="x">x coordinate of the tile</param>
 	/// <param name="y">y coordiante of the tile</param>
 	/// <returns></returns>
-	public TileView Item {
-		get { return _GameTiles(x, y).View; }
+	public TileView Item 
+	{
+		get 
+		{ 
+			return _GameTiles(x, y).View; 
+		}
 	}
 
 	/// <summary>
