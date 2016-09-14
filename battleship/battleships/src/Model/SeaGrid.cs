@@ -21,6 +21,9 @@ public class SeaGrid:ISeaGrid
 
 	private int _ShipsKilled = 0;
 
+	//Is SeaGrid.GameTiles supposed to be set to something? Without the following, SeaGrid._GameTiles stays null forever
+
+
 	/// <summary>
 	/// The sea grid has changed and should be redrawn.
 	/// </summary>
@@ -70,7 +73,7 @@ public class SeaGrid:ISeaGrid
 	{
 		get 
 		{ 
-			return _GameTiles[x, y].View; 
+			return _GameTiles [x, y].View;
 		}
 	}
 
@@ -94,10 +97,12 @@ public class SeaGrid:ISeaGrid
 	/// </summary>
 	public SeaGrid(Dictionary<ShipName, Ship> ships)
 	{
+		_GameTiles = new Tile [Width, Height];
 		//fill array with empty Tiles
 		int i = 0;
 		for (i = 0; i <= Width - 1; i++) {
 			for (int j = 0; j <= Height - 1; j++) {
+				//This might need to be changed, no replacement line was given in text file
 				_GameTiles[i, j] = new Tile(i, j, null);
 			}
 		}
