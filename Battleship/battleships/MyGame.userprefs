@@ -1,10 +1,7 @@
 ﻿<Properties StartupItem="MyGame.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\..\..\Downloads\battleships(2)\battleships\src\Model\AIHardPlayer.cs">
     <Files>
       <File FileName="..\..\..\..\..\..\..\Downloads\battleships(2)\battleships\src\Model\AIHardPlayer.cs" Line="1" Column="1" />
