@@ -1,8 +1,6 @@
-using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 /// <summary>
 /// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
@@ -13,7 +11,7 @@ public class Player : IEnumerable<Ship>
 
 	protected static Random _Random = new Random();
 	private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
-	private SeaGrid _playerGrid = new SeaGrid(_Ships);
+	private SeaGrid _playerGrid;
 	private ISeaGrid _enemyGrid;
 
 	protected BattleShipsGame _game;
@@ -40,6 +38,8 @@ public class Player : IEnumerable<Ship>
 		set { _enemyGrid = value; }
 	}
 
+
+
 	/// <summary>
 	/// Sets the game up with the ships the player has set up
 	/// </summary>
@@ -47,7 +47,7 @@ public class Player : IEnumerable<Ship>
 	public Player(BattleShipsGame controller)
 	{
 		_game = controller;
-
+		_playerGrid = new SeaGrid (_Ships);
 		//for each ship add the ships name so the seagrid knows about them
 		foreach (ShipName name in Enum.GetValues(typeof(ShipName))) {
 			if (name != ShipName.None) {
@@ -95,13 +95,11 @@ public class Player : IEnumerable<Ship>
 	/// <value>The ship</value>
 	/// <returns>The ship with the indicated name</returns>
 	/// <remarks>The none ship returns nothing/null</remarks>
-	public Ship Ship {
-		get {
+	public Ship Ship(ShipName name) {
 			if (name == ShipName.None)
 				return null;
 
-			return _Ships.Item(name);
-		}
+		return _Ships[name];
 	}
 
 	/// <summary>
