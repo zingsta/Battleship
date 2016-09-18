@@ -25,5 +25,5 @@ C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship
 C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\bin\Debug\normnfd.nlp
 C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\bin\Debug\normnfkc.nlp
 C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\bin\Debug\normnfkd.nlp
-C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
 C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache

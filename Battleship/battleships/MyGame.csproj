@@ -19,7 +19,12 @@
     <PlatformTarget>x86</PlatformTarget>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="%SystemRoot%\Microsoft.NET\Framework\v4.0.30319\MsBuild.exe &quot;${ProjectDir}/${ProjectName}.csproj&quot; /target:CopyFiles /p:Configuration=Debug-Windows;Platform=x86;OutDir=&quot;${TargetDir}&quot;" workingdir="${ProjectDir}" externalConsole="True" />
+        <Command>
+          <type>AfterBuild</type>
+          <command>%SystemRoot%\Microsoft.NET\Framework\v4.0.30319\MsBuild.exe "${ProjectDir}/${ProjectName}.csproj" /target:CopyFiles /p:Configuration=Debug-Windows;Platform=x86;OutDir="${TargetDir}"</command>
+          <workingdir>${ProjectDir}</workingdir>
+          <externalConsole>True</externalConsole>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -35,7 +40,10 @@
     <PlatformTarget>x86</PlatformTarget>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="xbuild ${ProjectName}.csproj /target:CopyFiles" />
+        <Command>
+          <type>AfterBuild</type>
+          <command>xbuild ${ProjectName}.csproj /target:CopyFiles</command>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -51,43 +59,17 @@
     <PlatformTarget>x86</PlatformTarget>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="xbuild ${ProjectName}.csproj /target:CopyFiles" />
+        <Command>
+          <type>AfterBuild</type>
+          <command>xbuild ${ProjectName}.csproj /target:CopyFiles</command>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="src\" />
     <Folder Include="Resources\" />
     <Folder Include="Resources\maps\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="src\DeploymentController.cs" />
-    <Compile Include="src\DiscoveryController.cs" />
-    <Compile Include="src\EndingGameController.cs" />
-    <Compile Include="src\GameController.cs" />
-    <Compile Include="src\GameLogic.cs" />
-    <Compile Include="src\GameResources.cs" />
-    <Compile Include="src\GameState.cs" />
-    <Compile Include="src\HighScoreController.cs" />
-    <Compile Include="src\MenuController.cs" />
-    <Compile Include="src\UtilityFunctions.cs" />
-    <Compile Include="src\Model\AIMediumPlayer.cs" />
-    <Compile Include="src\Model\AIOption.cs" />
-    <Compile Include="src\Model\AIPlayer.cs" />
-    <Compile Include="src\Model\AttackResult.cs" />
-    <Compile Include="src\Model\BattleShipsGame.cs" />
-    <Compile Include="src\Model\Direction.cs" />
-    <Compile Include="src\Model\ISeaGrid.cs" />
-    <Compile Include="src\Model\Player.cs" />
-    <Compile Include="src\Model\ResultOfAttack.cs" />
-    <Compile Include="src\Model\SeaGrid.cs" />
-    <Compile Include="src\Model\SeaGridAdapter.cs" />
-    <Compile Include="src\Model\Ship.cs" />
-    <Compile Include="src\Model\ShipName.cs" />
-    <Compile Include="src\Model\Tile.cs" />
-    <Compile Include="src\Model\TileView.cs" />
-    <Compile Include="src\Model\AIHardPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -275,9 +257,35 @@
     <None Include="bin\Debug\Resources\sounds\error.wav" />
     <None Include="bin\Debug\Resources\sounds\SwinGameStart.wav" />
     <None Include=".DS_Store" />
-    <None Include="MyGame.csproj" />
     <None Include="MyGame.sln" />
-    <None Include="MyGame.userprefs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\DeploymentController.cs" />
+    <Compile Include="src\DiscoveryController.cs" />
+    <Compile Include="src\EndingGameController.cs" />
+    <Compile Include="src\GameController.cs" />
+    <Compile Include="src\GameLogic.cs" />
+    <Compile Include="src\GameResources.cs" />
+    <Compile Include="src\GameState.cs" />
+    <Compile Include="src\HighScoreController.cs" />
+    <Compile Include="src\MenuController.cs" />
+    <Compile Include="src\UtilityFunctions.cs" />
+    <Compile Include="src\Model\AIHardPlayer.cs" />
+    <Compile Include="src\Model\AIMediumPlayer.cs" />
+    <Compile Include="src\Model\AIOption.cs" />
+    <Compile Include="src\Model\AIPlayer.cs" />
+    <Compile Include="src\Model\AttackResult.cs" />
+    <Compile Include="src\Model\BattleShipsGame.cs" />
+    <Compile Include="src\Model\Direction.cs" />
+    <Compile Include="src\Model\ISeaGrid.cs" />
+    <Compile Include="src\Model\Player.cs" />
+    <Compile Include="src\Model\ResultOfAttack.cs" />
+    <Compile Include="src\Model\SeaGrid.cs" />
+    <Compile Include="src\Model\SeaGridAdapter.cs" />
+    <Compile Include="src\Model\Ship.cs" />
+    <Compile Include="src\Model\ShipName.cs" />
+    <Compile Include="src\Model\Tile.cs" />
+    <Compile Include="src\Model\TileView.cs" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
