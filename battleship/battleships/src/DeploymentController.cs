@@ -1,10 +1,8 @@
 using System;
 using SwinGameSDK;
 
-/// <summary>
-/// The DeploymentController controls the players actions
-/// during the deployment phase.
-/// </summary>
+
+//The DeploymentController controls the players actions during the deployment phase.
 static class DeploymentController
 {
 	private const int SHIPS_TOP = 98;
@@ -32,14 +30,11 @@ static class DeploymentController
 
 	private static ShipName _selectedShip = ShipName.Tug;
 
-	/// <summary>
-	/// Handles user input for the Deployment phase of the game.
-	/// </summary>
-	/// <remarks>
-	/// Involves selecting the ships, deloying ships, changing the direction
-	/// of the ships to add, randomising deployment, end then ending
-	/// deployment
-	/// </remarks>
+	/* 
+	Handles user input for the Deployment phase of the game.
+	Involves selecting the ships, deloying ships, changing the direction
+	of the ships to add, randomising deployment, end then ending deployment
+	 */
 	public static void HandleDeploymentInput()
 	{
 		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
@@ -78,14 +73,12 @@ static class DeploymentController
 		}
 	}
 
-	/// <summary>
-	/// The user has clicked somewhere on the screen, check if its is a deployment and deploy
-	/// the current ship if that is the case.
-	/// </summary>
-	/// <remarks>
-	/// If the click is in the grid it deploys to the selected location
-	/// with the indicated direction
-	/// </remarks>
+	/* 
+	The user has clicked somewhere on the screen, check if its is a deployment and deploy
+	the current ship if that is the case.
+	If the click is in the grid it deploys to the selected location
+	with the indicated direction
+	 */
 	private static void DoDeployClick()
 	{
 		Point2D mouse = default(Point2D);
@@ -111,10 +104,7 @@ static class DeploymentController
 		}
 	}
 
-	/// <summary>
-	/// Draws the deployment screen showing the field and the ships
-	/// that the player can deploy.
-	/// </summary>
+	//Draws the deployment screen showing the field and the ships that the player can deploy.
 	public static void DrawDeployment()
 	{
 		UtilityFunctions.DrawField((ISeaGrid)GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer, true);
@@ -159,10 +149,10 @@ static class DeploymentController
 		UtilityFunctions.DrawMessage();
 	}
 
-	/// <summary>
-	/// Gets the ship that the mouse is currently over in the selection panel.
-	/// </summary>
-	/// <returns>The ship selected or none</returns>
+	/*
+	Gets the ship that the mouse is currently over in the selection panel.
+	<returns>The ship selected or none</returns>
+	*/
 	private static ShipName GetShipMouseIsOver()
 	{
 		foreach (ShipName sn in Enum.GetValues(typeof(ShipName))) {
@@ -177,10 +167,3 @@ static class DeploymentController
 		return ShipName.None;
 	}
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================

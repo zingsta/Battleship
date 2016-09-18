@@ -1,14 +1,12 @@
 using SwinGameSDK;
 
-/// <summary>
-/// The logic of the game, responsible for loading in the main essence of the
-/// game, loading in resources and other main pieces of information. 
-/// </summary>
+/* 
+The logic of the game, responsible for loading in the main essence of the
+game, loading in resources and other main pieces of information. 
+ */
 static class GameLogic
 {
-	/// <summary>
-	/// Main file
-	/// </summary>
+	//Main file
 	public static void Main()
 	{
 		//Opens a new Graphics Window
@@ -31,10 +29,3 @@ static class GameLogic
 		GameResources.FreeResources();
 	}
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================

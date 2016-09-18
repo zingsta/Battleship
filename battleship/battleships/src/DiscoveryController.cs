@@ -1,19 +1,14 @@
 using System;
 using SwinGameSDK;
 
-/// <summary>
-/// The battle phase is handled by the DiscoveryController.
-/// </summary>
+//The battle phase is handled by the DiscoveryController.
 static class DiscoveryController
 {
 
-	/// <summary>
-	/// Handles input during the discovery phase of the game.
-	/// </summary>
-	/// <remarks>
-	/// Escape opens the game menu. Clicking the mouse will
-	/// attack a location.
-	/// </remarks>
+	/* 
+	Handles input during the discovery phase of the game.
+	Escape opens the game menu. Clicking the mouse will attack a location.
+	 */
 	public static void HandleDiscoveryInput()
 	{
 		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
@@ -25,9 +20,7 @@ static class DiscoveryController
 		}
 	}
 
-	/// <summary>
-	/// Attack the location that the mouse if over.
-	/// </summary>
+	//Attack the location that the mouse if over.
 	private static void DoAttack()
 	{
 		Point2D mouse = default(Point2D);
@@ -47,9 +40,7 @@ static class DiscoveryController
 		}
 	}
 
-	/// <summary>
-	/// Draws the game during the attack phase.
-	/// </summary>s
+	//Draws the game during the attack phase.
 	public static void DrawDiscovery()
 	{
 		const int SCORES_LEFT = 172;
@@ -72,10 +63,3 @@ static class DiscoveryController
 	}
 
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================

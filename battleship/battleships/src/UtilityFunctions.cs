@@ -1,10 +1,8 @@
 using SwinGameSDK;
 using System.Collections.Generic;
 
-/// <summary>
-/// This includes a number of utility methods for
-/// drawing and interacting with the Mouse.
-/// </summary>
+//This includes a number of utility methods for drawing and interacting with the Mouse.
+
 static class UtilityFunctions
 {
 	public const int FIELD_TOP = 122;
@@ -39,14 +37,15 @@ static class UtilityFunctions
 
 	public const int FRAMES_PER_CELL = 8;
 
-	/// <summary>
-	/// Determines if the mouse is in a given rectangle.
-	/// </summary>
-	/// <param name="x">the x location to check</param>
-	/// <param name="y">the y location to check</param>
-	/// <param name="w">the width to check</param>
-	/// <param name="h">the height to check</param>
-	/// <returns>true if the mouse is in the area checked</returns>
+/*
+Determines if the mouse is in a given rectangle.
+<param name="x">the x location to check</param>
+<param name="y">the y location to check</param>
+<param name="w">the width to check</param>
+<param name="h">the height to check</param>
+<returns>true if the mouse is in the area checked</returns>
+*/
+
 	public static bool IsMouseInRectangle(int x, int y, int w, int h)
 	{
 		Point2D mouse = default(Point2D);
@@ -65,23 +64,25 @@ static class UtilityFunctions
 		return result;
 	}
 
-	/// <summary>
-	/// Draws a large field using the grid and the indicated player's ships.
-	/// </summary>
-	/// <param name="grid">the grid to draw</param>
-	/// <param name="thePlayer">the players ships to show</param>
-	/// <param name="showShips">indicates if the ships should be shown</param>
+/*
+Draws a large field using the grid and the indicated player's ships.
+<param name="grid">the grid to draw</param>
+<param name="thePlayer">the players ships to show</param>
+<param name="showShips">indicates if the ships should be shown</param>
+*/
+
 	public static void DrawField(ISeaGrid grid, Player thePlayer, bool showShips)
 	{
 		DrawCustomField(grid, thePlayer, false, showShips, FIELD_LEFT, FIELD_TOP, FIELD_WIDTH, FIELD_HEIGHT, CELL_WIDTH, CELL_HEIGHT,
 		CELL_GAP);
 	}
 
-	/// <summary>
-	/// Draws a small field, showing the attacks made and the locations of the player's ships
-	/// </summary>
-	/// <param name="grid">the grid to show</param>
-	/// <param name="thePlayer">the player to show the ships of</param>
+/*
+Draws a small field, showing the attacks made and the locations of the player's ships
+<param name="grid">the grid to show</param>
+<param name="thePlayer">the player to show the ships of</param>
+*/
+
 	public static void DrawSmallField(ISeaGrid grid, Player thePlayer)
 	{
 		const int SMALL_FIELD_LEFT = 39;
@@ -96,25 +97,25 @@ static class UtilityFunctions
 		SMALL_FIELD_CELL_GAP);
 	}
 
-	/// <summary>
-	/// Draws the player's grid and ships.
-	/// </summary>
-	/// <param name="grid">the grid to show</param>
-	/// <param name="thePlayer">the player to show the ships of</param>
-	/// <param name="small">true if the small grid is shown</param>
-	/// <param name="showShips">true if ships are to be shown</param>
-	/// <param name="left">the left side of the grid</param>
-	/// <param name="top">the top of the grid</param>
-	/// <param name="width">the width of the grid</param>
-	/// <param name="height">the height of the grid</param>
-	/// <param name="cellWidth">the width of each cell</param>
-	/// <param name="cellHeight">the height of each cell</param>
-	/// <param name="cellGap">the gap between the cells</param>
+/*
+Draws the player's grid and ships.
+<param name="grid">the grid to show</param>
+<param name="thePlayer">the player to show the ships of</param>
+<param name="small">true if the small grid is shown</param>
+<param name="showShips">true if ships are to be shown</param>
+<param name="left">the left side of the grid</param>
+<param name="top">the top of the grid</param>
+<param name="width">the width of the grid</param>
+<param name="height">the height of the grid</param>
+<param name="cellWidth">the width of each cell</param>
+<param name="cellHeight">the height of each cell</param>
+<param name="cellGap">the gap between the cells</param>
+*/
+
 	private static void DrawCustomField(ISeaGrid grid, Player thePlayer, bool small, bool showShips, int left, int top, int width, int height, int cellWidth, int cellHeight,
 	int cellGap)
 	{
 		//SwinGame.FillRectangle(Color.Blue, left, top, width, height)
-
 		int rowTop = 0;
 		int colLeft = 0;
 
@@ -203,27 +204,25 @@ static class UtilityFunctions
 
 	private static string _message;
 
-	/// <summary>
-	/// The message to display
-	/// </summary>
-	/// <value>The message to display</value>
-	/// <returns>The message to display</returns>
+/*
+The message to display
+<value>The message to display</value>
+<returns>The message to display</returns>
+*/
+
 	public static string Message {
 		get { return _message; }
 		set { _message = value; }
 	}
 
-	/// <summary>
-	/// Draws the message to the screen
-	/// </summary>
+
+	//Draws the message to the screen
 	public static void DrawMessage()
 	{
 		SwinGame.DrawText(Message, MESSAGE_COLOR, GameResources.GameFont("Courier"), FIELD_LEFT, MESSAGE_TOP);
 	}
 
-	/// <summary>
-	/// Draws the background for the current state of the game
-	/// </summary>
+	//Draws the background for the current state of the game
 	public static void DrawBackground()
 	{
 		switch (GameController.CurrentState) {
@@ -248,22 +247,24 @@ static class UtilityFunctions
 		SwinGame.DrawFramerate(675, 585, GameResources.GameFont("CourierSmall"));
 	}
 
-	/// <summary>
-	/// Adds the explosion.
-	/// </summary>
-	/// <param name="row">Row for explosion</param>
-	/// <param name="col">Col for explosion</param>
+/*
+Adds the explosion.
+<param name="row">Row for explosion</param>
+<param name="col">Col for explosion</param>
+*/
+
 	public static void AddExplosion(int row, int col)
 	{
 		//incorrect name, splash
 		AddAnimation(row, col, "Splash");
 	}
 
-	/// <summary>
-	/// Adds the splash.
-	/// </summary>
-	/// <param name="row">Row of Splash</param>
-	/// <param name="col">Column of Splash</param>
+/*
+Adds the splash.
+<param name="row">Row of Splash</param>
+<param name="col">Column of Splash</param>
+*/
+
 	public static void AddSplash(int row, int col)
 	{
 		AddAnimation(row, col, "Splash");
@@ -272,12 +273,13 @@ static class UtilityFunctions
 
 	private static List<Sprite> _Animations = new List<Sprite>();
 
-	/// <summary>
-	/// Adds the animation.
-	/// </summary>
-	/// <param name="row">Row for animation</param>
-	/// <param name="col">Column for animation</param>
-	/// <param name="image">Image for animation</param>
+/*
+Adds the animation.
+<param name="row">Row for animation</param>
+<param name="col">Column for animation</param>
+<param name="image">Image for animation</param>
+*/
+
 	private static void AddAnimation(int row, int col, string image)
 	{
 		Sprite s = default(Sprite);
@@ -297,9 +299,7 @@ static class UtilityFunctions
 		_Animations.Add(s);
 	}
 
-	/// <summary>
-	/// Updates the animations.
-	/// </summary>
+	//Updates the animations.
 	public static void UpdateAnimations()
 	{
 		List<Sprite> ended = new List<Sprite>();
@@ -316,9 +316,7 @@ static class UtilityFunctions
 		}
 	}
 
-	/// <summary>
-	/// Draws the animations.
-	/// </summary>
+	//Draws the animations.
 	public static void DrawAnimations()
 	{
 		foreach (Sprite s in _Animations) {
@@ -326,9 +324,7 @@ static class UtilityFunctions
 		}
 	}
 
-	/// <summary>
-	/// Draws the animation sequence.
-	/// </summary>
+	//Draws the animation sequence.
 	public static void DrawAnimationSequence()
 	{
 		int i = 0;
@@ -338,10 +334,3 @@ static class UtilityFunctions
 		}
 	}
 }
-
-//=======================================================
-//Service provided by Telerik (www.telerik.com)
-//Conversion powered by NRefactory.
-//Twitter: @telerik
-//Facebook: facebook.com/telerik
-//=======================================================
