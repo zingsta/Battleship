@@ -9,22 +9,14 @@ Data is saved to a file.
 */
 static class HighScoreController
 {
-	const int NAME_WIDTH = 3;
+	private const int NAME_WIDTH = 3;
 
-	const int SCORES_LEFT = 490;
-
-<<<<<<< HEAD
-	/// <summary>
-	/// The score structure is used to keep the name and
-	/// score of the top players together.
-	/// </summary>
-=======
 	private const int SCORES_LEFT = 490;
+
 	/*
 	The score structure is used to keep the name and
 	score of the top players together.
 	*/
->>>>>>> 4786b05667642f844fba717f659639d28e87a8f1
 	private struct Score : IComparable
 	{
 		public string Name;

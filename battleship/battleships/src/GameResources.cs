@@ -1,9 +1,4 @@
-
-using Microsoft.VisualBasic;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using SwinGameSDK;
 
 public static class GameResources
@@ -195,19 +190,11 @@ public static class GameResources
 
 	}
 
-<<<<<<< HEAD
-	/// <summary>
-	/// Ends the loading screen.
-	/// </summary>
-	/// <param name="message">Message to show</param>
-	/// <param name="number"></param>
-=======
 	/*
 	Ends the loading screen.
 	<param name="Message">Message to show</param>
 	<param name="Number"></param>
 	*/
->>>>>>> 4786b05667642f844fba717f659639d28e87a8f1
 	private static void ShowMessage(string message, int number)
 	{
 		const int TX = 310;

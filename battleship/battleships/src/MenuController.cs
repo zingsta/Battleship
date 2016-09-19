@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-using Microsoft.VisualBasic;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics;
->>>>>>> 4786b05667642f844fba717f659639d28e87a8f1
 using SwinGameSDK;
 
 /*

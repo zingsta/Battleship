@@ -1,5 +1,4 @@
 using SwinGameSDK;
-
 /* 
 The logic of the game, responsible for loading in the main essence of the
 game, loading in resources and other main pieces of information. 

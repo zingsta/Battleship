@@ -45,15 +45,10 @@ public static class GameController
 		get { return _ai; }
 	}
 
-<<<<<<< HEAD
 	/// <summary>
 	/// Main menu or quitting
 	/// </summary>
 	static GameController()
-=======
-	//Main menu or quitting
-	public GameController()
->>>>>>> 4786b05667642f844fba717f659639d28e87a8f1
 	{
 		//bottom state will be quitting. If player exits main menu then the game is over
 		_state.Push(GameState.Quitting);
@@ -149,17 +144,6 @@ public static class GameController
 		UtilityFunctions.DrawAnimationSequence();
 	}
 
-<<<<<<< HEAD
-	/// <summary>
-	/// Listens for attacks to be completed.
-	/// </summary>
-	/// <param name="sender">the game</param>
-	/// <param name="result">the result of the attack</param>
-	/// <remarks>
-	/// Displays a message, plays sound and redraws the screen
-	/// </remarks>
-	static void AttackCompleted (object sender, AttackResult result)
-=======
 	/* 
 	Listens for attacks to be completed.
 	<param name="sender">the game</param>
@@ -168,7 +152,6 @@ public static class GameController
 	Displays a message, plays sound and redraws the screen
 	 */
 	private static void AttackCompleted(object sender, AttackResult result)
->>>>>>> 4786b05667642f844fba717f659639d28e87a8f1
 	{
 		bool isHuman = false;
 		isHuman = ReferenceEquals (_theGame.Player, HumanPlayer);
