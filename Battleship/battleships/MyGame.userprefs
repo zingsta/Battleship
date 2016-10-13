@@ -5,9 +5,20 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\Model\SeaGrid.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\DeploymentController.cs">
     <Files>
-      <File FileName="src\Model\SeaGrid.cs" Line="183" Column="23" />
+      <File FileName="src\DiscoveryController.cs" Line="48" Column="27" />
+      <File FileName="src\GameController.cs" Line="276" Column="37" />
+      <File FileName="src\GameLogic.cs" Line="15" Column="2" />
+      <File FileName="src\GameResources.cs" Line="12" Column="39" />
+      <File FileName="src\GameState.cs" Line="23" Column="2" />
+      <File FileName="src\HighScoreController.cs" Line="122" Column="109" />
+      <File FileName="src\MenuController.cs" Line="298" Column="2" />
+      <File FileName="src\UtilityFunctions.cs" Line="6" Column="14" />
+      <File FileName="src\Model\AIPlayer.cs" Line="20" Column="20" />
+      <File FileName="src\Model\AIHardPlayer.cs" Line="120" Column="3" />
+      <File FileName="src\EndingGameController.cs" Line="19" Column="1" />
+      <File FileName="src\DeploymentController.cs" Line="153" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

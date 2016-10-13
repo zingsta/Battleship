@@ -43,6 +43,7 @@ static class DiscoveryController
 	//Draws the game during the attack phase.
 	public static void DrawDiscovery()
 	{
+		
 		const int SCORES_LEFT = 172;
 		const int SHOTS_TOP = 157;
 		const int HITS_TOP = 206;
