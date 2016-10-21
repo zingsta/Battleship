@@ -1,0 +1,8 @@
+/Users/heejookim/Desktop/Battleship-CS/obj/x86/Debug-Windows/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/heejookim/Desktop/Battleship-CS/bin/Debug/MyGame.exe
+/Users/heejookim/Desktop/Battleship-CS/obj/x86/Debug-Windows/MyGame.exe
+/Users/heejookim/Desktop/Battleship-CS/bin/Debug/SwinGame.dll
+/Users/heejookim/Battleship/Battleship-CS/obj/x86/Debug-Windows/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/heejookim/Battleship/Battleship-CS/bin/Debug/MyGame.exe
+/Users/heejookim/Battleship/Battleship-CS/obj/x86/Debug-Windows/MyGame.exe
+/Users/heejookim/Battleship/Battleship-CS/bin/Debug/SwinGame.dll
