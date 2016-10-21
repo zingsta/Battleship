@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+[assembly: System.Runtime.CompilerServices.InternalsVisibleToAttribute("MyGame.UnitTests")]
+
 namespace Tests
 {
     [TestFixture()]
-    public class MenuControllerTests
+    public class MenuControllerTest
     {
         [Test()]
         public void PerformSetupMenuActionTest()
@@ -21,3 +23,4 @@ namespace Tests
         }
     }
 }
+
