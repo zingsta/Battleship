@@ -12,11 +12,17 @@ static class EndingGameController
 		UtilityFunctions.DrawSmallField ((ISeaGrid)GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer);
 
 		if (GameController.HumanPlayer.IsDestroyed) {
+<<<<<<< HEAD
 			SwinGame.DrawTextLines ("YOU LOSE!", Color.White, Color.Transparent, GameResources.GameFont ("ArialLarge"), FontAlignment.AlignCenter, 0, 250, SwinGame.ScreenWidth (), SwinGame.ScreenHeight ());
 
 		} else {
 			SwinGame.DrawTextLines ("-- WINNER --", Color.White, Color.Transparent, GameResources.GameFont ("ArialLarge"), FontAlignment.AlignCenter, 0, 250, SwinGame.ScreenWidth (), SwinGame.ScreenHeight ());
 
+=======
+			SwinGame.DrawTextLines ("YOU LOSE!", Color.White, Color.Transparent, GameResources.GameFont ("ArialLarge"), FontAlignment.AlignCenter, 0, 200, SwinGame.ScreenWidth (), SwinGame.ScreenHeight ());
+		} else {
+			SwinGame.DrawTextLines ("-- WINNER --", Color.White, Color.Transparent, GameResources.GameFont ("ArialLarge"), FontAlignment.AlignCenter, 0, 200, SwinGame.ScreenWidth (), SwinGame.ScreenHeight ());
+>>>>>>> origin/user-interface
 		}
 	}
 	/* 

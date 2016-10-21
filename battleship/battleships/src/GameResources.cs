@@ -8,8 +8,13 @@ public static class GameResources
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
 		NewFont("Courier", "cour.ttf", 14);
+<<<<<<< HEAD
 		NewFont("CourierSmall", "cour.ttf", 8);
 		NewFont("Menu", "ffaccess.ttf", 10);
+=======
+		NewFont("CourierSmall", "maven_pro_regular.ttf", 15);
+		NewFont("Menu", "ffaccess.ttf", 8);
+>>>>>>> origin/user-interface
 	}
 
 	//Loads the images
@@ -55,7 +60,7 @@ public static class GameResources
 	//Loads the music
 	private static void LoadMusic()
 	{
-		NewMusic("Background", "horrordrone.mp3");
+		NewMusic("Background", "Background.wav");
 	}
 
 	/*
@@ -185,9 +190,7 @@ public static class GameResources
 			SwinGame.RefreshScreen();
 			SwinGame.ProcessEvents();
 		}
-
 		SwinGame.Delay(1500);
-
 	}
 
 	/*
