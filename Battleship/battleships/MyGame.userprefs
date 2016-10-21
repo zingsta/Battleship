@@ -5,7 +5,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\DeploymentController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\EndingGameController.cs">
     <Files>
       <File FileName="src\DiscoveryController.cs" Line="48" Column="27" />
       <File FileName="src\GameController.cs" Line="276" Column="37" />
@@ -17,8 +17,8 @@
       <File FileName="src\UtilityFunctions.cs" Line="6" Column="14" />
       <File FileName="src\Model\AIPlayer.cs" Line="20" Column="20" />
       <File FileName="src\Model\AIHardPlayer.cs" Line="120" Column="3" />
-      <File FileName="src\EndingGameController.cs" Line="19" Column="1" />
-      <File FileName="src\DeploymentController.cs" Line="153" Column="27" />
+      <File FileName="src\EndingGameController.cs" Line="19" Column="4" />
+      <File FileName="src\DeploymentController.cs" Line="161" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>
