@@ -1,0 +1,5 @@
+/Users/heejookim/Battleship/Battleship/battleships/obj/x86/Debug-Windows/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/heejookim/Battleship/Battleship/battleships/obj/x86/Debug-Windows/MyGame.exe
+/Users/heejookim/Battleship/Battleship/battleships/bin/Debug/SwinGame.dll
+/Users/heejookim/Battleship/Battleship/battleships/bin/Debug/nunit.framework.dll
+/Users/heejookim/Battleship/Battleship/battleships/bin/Debug/MyGame.exe

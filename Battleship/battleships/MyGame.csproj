@@ -251,6 +251,7 @@
     <None Include=".DS_Store" />
     <None Include="MyGame.sln" />
     <None Include="packages.config" />
+    <None Include="bin\Debug\Resources\images\main_page.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\DeploymentController.cs" />
@@ -280,6 +281,7 @@
     <Compile Include="src\Model\Tile.cs" />
     <Compile Include="src\Model\TileView.cs" />
     <Compile Include="src\UnitTest.cs" />
+    <Compile Include="src\Model\AIEasyPlayer.cs" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
