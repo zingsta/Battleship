@@ -21,3 +21,26 @@ C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship
 C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\bin\Debug\MyGame.exe
 C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.exe
 C:\Users\Lachlan\Documents\Uni\Semester 2\Software Develpoment Course\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\animations\startup.txt
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\bundles\FileDialog.txt
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\bundles\splash.txt
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\fonts\arial.ttf
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\fonts\cour.ttf
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\fdFile.png
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\fdFolder.png
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\FileDialog_Active.png
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\FileDialog_Background.png
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\FileDialog_Inactive.png
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\FileDialog_Scroll.png
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\Swinburne.jpg
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\images\SwinGameAni.png
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\panels\FileDialog.txt
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\sounds\error.wav
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\sounds\SwinGameStart.wav
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\SwinGame.icns
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\Resources\SwinGame.ico
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\MyGame.exe
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.exe
