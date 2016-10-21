@@ -207,6 +207,15 @@ public class Player : IEnumerable<Ship>
 		return result;
 	}
 
+	public virtual void AlignDeployment()
+	{
+		PlayerGrid.MoveShip (0, 0, ShipName.Tug, Direction.LeftRight);
+		PlayerGrid.MoveShip (1, 0, ShipName.Submarine, Direction.LeftRight);
+		PlayerGrid.MoveShip (2, 0, ShipName.Destroyer, Direction.LeftRight);
+		PlayerGrid.MoveShip (3, 0, ShipName.Battleship, Direction.LeftRight);
+		PlayerGrid.MoveShip (4, 0, ShipName.AircraftCarrier, Direction.LeftRight);
+	}
+
 	/// <summary>
 	/// Randomises Deployment
 	/// </summary>

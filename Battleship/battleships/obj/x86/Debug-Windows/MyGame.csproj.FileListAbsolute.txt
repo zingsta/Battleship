@@ -50,3 +50,5 @@ D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\
 D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\MyGame.exe
 D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
 D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\obj\x86\Debug-Windows\MyGame.exe
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\nunit.framework.dll
+D:\1Study Swinburne\BA-ICT\Semester 2\Tools and Practices\battleship\Battleship\Battleship\battleships\bin\Debug\nunit.framework.xml
