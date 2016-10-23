@@ -18,8 +18,8 @@ static class GameLogic
 
 		//Game Loop
 		do {
-			GameController.HandleUserInput();
 			GameController.DrawScreen();
+			GameController.HandleUserInput();
 		} while (!(SwinGame.WindowCloseRequested() == true | GameController.CurrentState == GameState.Quitting));
 
 		SwinGame.StopMusic();

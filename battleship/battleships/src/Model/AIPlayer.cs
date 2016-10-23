@@ -7,11 +7,15 @@ using SwinGameSDK;
 public abstract class AIPlayer : Player
 {
 
+#pragma warning disable CS0660 // Type defines operator == or operator != but does not override Object.Equals(object o)
+#pragma warning disable CS0661 // Type defines operator == or operator != but does not override Object.GetHashCode()
 	/// <summary>
 	/// Location can store the location of the last hit made by an
 	/// AI Player. The use of which determines the difficulty.
 	/// </summary>
 	protected class Location
+#pragma warning restore CS0661 // Type defines operator == or operator != but does not override Object.GetHashCode()
+#pragma warning restore CS0660 // Type defines operator == or operator != but does not override Object.Equals(object o)
 	{
 		private int _Row;
 
@@ -56,7 +60,7 @@ public abstract class AIPlayer : Player
 		/// <returns>true if location 1 and location 2 are at the same spot</returns>
 		public static bool operator ==(Location @this, Location other)
 		{
-			return @this != null && other != null && @this.Row == other.Row && @this.Column == other.Column;
+			return !ReferenceEquals (@this, null) && !ReferenceEquals (other, null) && @this.Row == other.Row && @this.Column == other.Column;
 		}
 
 		/// <summary>
