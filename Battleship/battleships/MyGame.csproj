@@ -252,6 +252,8 @@
     <None Include="MyGame.sln" />
     <None Include="packages.config" />
     <None Include="bin\Debug\Resources\images\main_page.jpg" />
+    <None Include="Resources\sounds\Background.wav" />
+    <None Include="bin\Debug\Resources\sounds\Background.wav" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\DeploymentController.cs" />
